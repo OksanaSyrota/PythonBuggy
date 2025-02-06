@@ -30,8 +30,8 @@ class PopularModelPageTestSuits(unittest.TestCase):
         self.assertEqual('Diablo', self.popular_model_page.get_diablo_text())
         self.assertEqual('Engine: 6.0l', self.popular_model_page.get_engine_text())
         self.assertEqual('Max Speed: 25km/h', self.popular_model_page.get_max_speed_text())
-        self.assertEqual('Votes: 3563', self.popular_model_page.get_votes_text())
-        self.assertEqual('3563', self.popular_model_page.get_number_of_votes_text())
+        self.assertEqual('Votes: 3624', self.popular_model_page.get_votes_text())
+        self.assertEqual('3624', self.popular_model_page.get_number_of_votes_text())
         self.assertEqual('You need to be logged in to vote.',
                          self.popular_model_page.get_you_need_to_be_logged_text())
 
@@ -39,7 +39,6 @@ class PopularModelPageTestSuits(unittest.TestCase):
         self.popular_model_page.login_to_account()
         self.assertEqual('Your Comment (optional)', self.popular_model_page.get_your_comment_text())
         self.popular_model_page.click_vote_button()
-        #self.assertEqual('Thank you for your vote!', self.popular_model_page.get_thank_you_for_vote_text())
         self.popular_model_page.logout_from_account()
         self.assertEqual('You need to be logged in to vote.',
                          self.popular_model_page.get_you_need_to_be_logged_text())

@@ -1,10 +1,11 @@
 from selenium.webdriver import Chrome
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-# Corrected driver initialization
-driver = webdriver.Chrome(service=webdriver.chrome.service.Service(ChromeDriverManager().install()))
+chrome_service = Service(ChromeDriverManager().install())  # This will use the latest version by default
+driver = webdriver.Chrome(service=chrome_service)
 
 wait = WebDriverWait(driver, 10)
 
