@@ -43,7 +43,7 @@ class PopularModelPageTestSuits(unittest.TestCase):
         self.popular_model_page.logout_from_account()
         self.assertEqual('You need to be logged in to vote.',
                          self.popular_model_page.get_you_need_to_be_logged_text())
-
+#just check GitHub!!!!
 
 
         @classmethod
